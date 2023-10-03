@@ -1,0 +1,20 @@
+// 터미널에 tsc --init 으로 설치
+{
+  // include(컴파일 범위 설정): 배열 안 폴더의 하위 경로 파일을 컴파일 함.
+  "include": ["src"],
+  // 타입 설정시 영향을 주는 설정을 여기 안에 씀
+  "compilerOptions": {
+    // 컴파일 된 파일의 js버전을 설정함
+    "target": "ESNext",
+    // es module, commonjs중에 설정
+    "module": "ESNext",
+    // 컴파일 된 js파일이 생설 될 폴더 설정
+    "outDir": "dist",
+    // 얼마나 엄격하게 검사를 할지 결정하는 설정으로 값은 true,false가 있다.
+    "strict": true,
+    // TS는 모든 파일의 각각의 모듈이 아닌 하나의 파일로 간주하는데, 각각의 파일을 독립된 모듈로
+    // 설정하기 위해서 사용함.
+    "moduleDetection": "force"
+  },
+  "ts-node": { "esm": true }
+}
