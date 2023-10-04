@@ -50,3 +50,9 @@ book = {
   //   skill: "typescript", //리터럴로 대입하면 초과 프로퍼티 검사에 의해서 제한을 받음
 };
 console.log(book);
+
+function func(book: Book) {}
+func({
+  name: "kim",
+  price: 600,
+});
